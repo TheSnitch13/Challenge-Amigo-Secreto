@@ -2,6 +2,6 @@
 let amigos = [];
 
 function nuevoAmigo (nombre){
-    document.getElementById("");
+    document.getElementById("amigo");
     nuevoAmigo.push(nombre);
 }
