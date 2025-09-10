@@ -23,8 +23,7 @@ function listarAmigo (){
     }
 }
 function sortearAmigo (){
-    let lista = document.getElementById("listaAmigos");
-    lista.innerHTML = "";
+    limpiar();
     if(!(amigos.length == 0)){
         let numeroIndice = Math.floor(Math.random()*amigos.length);
         let amigoSecreto = document.getElementById("resultado");
@@ -36,4 +35,9 @@ function sortearAmigo (){
     else{
         alert("¡Debes ingresar amigos!")
     }
+}
+
+function limpiar(){
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
 }
