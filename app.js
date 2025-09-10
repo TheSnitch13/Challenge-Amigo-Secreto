@@ -21,5 +21,19 @@ function listarAmigo (){
         li.textContent = amigos[i];
         lista.appendChild(li);
     }
-    
+}
+function sortearAmigo (){
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
+    if(!(amigos.length == 0)){
+        let numeroIndice = Math.floor(Math.random()*amigos.length);
+        let amigoSecreto = document.getElementById("resultado");
+        amigoSecreto.innerHTML = "";
+        let li = document.createElement("li");
+        li.textContent = (`El amigo secreto sorteado es: ${amigos[numeroIndice]}`); 
+        amigoSecreto.appendChild(li);  
+    }
+    else{
+        alert("¡Debes ingresar amigos!")
+    }
 }
