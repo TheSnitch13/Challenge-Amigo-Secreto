@@ -2,7 +2,12 @@
 let amigos = [];
 
 function nuevoAmigo (){
-    let nombre = document.getElementById("amigo").value;
+    let input = document.getElementById("amigo");
+    let nombre = input.value.trim();
+    if(nombre == ""){
+        alert("Debes escribir un nombre");
+    }
     amigos.push(nombre);
     console.log(amigos[amigos.length -1]);
+    document.getElementById("amigo").value = "";
 }
